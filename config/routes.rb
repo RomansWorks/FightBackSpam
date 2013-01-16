@@ -1,4 +1,7 @@
 FightSpam::Application.routes.draw do
+  resources :spams
+
+
   resources :users
 
 
