@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user_roman = User.create({ name: 'Roman', email: 'roman.baron@gmail.com' })
+user_assaf = User.create({ name: 'Assaf', email: 'assafshomer@gmail.com' })
+Spam.create({title:'CI@LIS', content: 'Buy G00D CIALIS', submitter: user_roman } )
+Spam.create({title:'Via$$GRA', content: 'Buy G00D V$$GRA', submitter: user_assaf } )
