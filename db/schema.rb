@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130117075143) do
+ActiveRecord::Schema.define(:version => 20130117090147) do
 
   create_table "spams", :force => true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content",      :limit => 255
     t.string   "spammer"
     t.integer  "submitter_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   add_index "spams", ["submitter_id"], :name => "index_spams_on_submitter_id"
